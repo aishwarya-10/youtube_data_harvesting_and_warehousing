@@ -38,5 +38,5 @@ Upon successful setup and activation of the project, users can engage with the S
 - Conduct channel data analysis and visualization using these integrated features.
 
 ## Conclusion
-
+  This project endeavors to craft a user-friendly Streamlit application, leveraging the Google API to extract detailed information from YouTube channels. The retrieved data is then stored in a MongoDB database and seamlessly migrated to a SQL data warehouse. The Streamlit app offers users the functionality to effortlessly search for channel details and perform table joins, enhancing the overall data exploration experience.
 
