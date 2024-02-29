@@ -1,8 +1,6 @@
 # YouTube Data Harvesting and Warehousing
 The project extracts YouTube channel data using the YouTube API key.
 
-![youtube_img1](https://github.com/aishwarya-10/youtube_data_harvesting_and_warehousing/assets/48954230/83d0d108-2b5d-4cf7-9d91-809bf7082ed2)
-
 ## Overview
   The project uses the YouTube Data API to harvest data from YouTube channels, followed by meticulous processing and subsequent warehousing. At first, the acquired data is stored in MongoDB as documents and then converted into SQL records to facilitate comprehensive data analysis. Finally, the retrieved data is displayed on the Streamlit app.
 
