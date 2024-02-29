@@ -1,5 +1,6 @@
 # YouTube Data Harvesting and Warehousing
 The project extracts YouTube channel data using the YouTube API key.
+![youtube_img](https://github.com/aishwarya-10/youtube_data_harvesting_and_warehousing/assets/48954230/0e93a065-af6b-4af3-b8de-7aaf8be5075d)
 
 ## Overview
   The project uses the YouTube Data API to harvest data from YouTube channels, followed by meticulous processing and subsequent warehousing. At first, the acquired data is stored in MongoDB as documents and then converted into SQL records to facilitate comprehensive data analysis. Finally, the retrieved data is displayed on the Streamlit app.
@@ -26,7 +27,9 @@ The following skills were acquired from the project:
 - **Data Management:** Initially the harvested data is stored in MongoDB, as it can handle unstructured and semi-structured data easily. '''pymongo''' library is used to connect Python with MongoDB.
 - **Data Migration:** Upon collecting data from multiple channels, the next phase involves the transformation and migration of the documented data into a structured MySQL database. This meticulous process ensures that the collected data is organized and optimized for efficient querying and analysis in the '''pymysql''' environment.
 - **Data Analysis:** Leveraging join functions in SQL queries, valuable insights about channels are retrieved according to user input.
-- **Display Data:** Finally Streamlit displays the channel insights using tables and charts to help users to analyze the data. 
+- **Display Data:** Finally Streamlit displays the channel insights using tables and charts to help users to analyze the data.
+
+![image](https://github.com/aishwarya-10/youtube_data_harvesting_and_warehousing/assets/48954230/cf82d0b5-37d2-4090-a57a-5a7aaf7887d1)
 
 ## App Usage
 Upon successful setup and activation of the project, users can engage with the Streamlit application via a web browser. The application presents a user-friendly interface, enabling users to perform the following actions:
