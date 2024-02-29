@@ -4,7 +4,7 @@ The project extracts YouTube channel data using the YouTube API key.
 ## Overview
   The project uses the YouTube Data API to harvest data from YouTube channels, followed by meticulous processing and subsequent warehousing. At first, the acquired data is stored in MongoDB as documents and then converted into SQL records to facilitate comprehensive data analysis. Finally, the retrieved data is displayed on the Streamlit app.
 
-**Demo Video:** Click here to watch
+**Demo Video:** [Click here to watch](https://www.linkedin.com/posts/aishwarya-velmurugan_greetings-im-aishwarya-i-would-like-to-activity-7169040503974342657-ObAr?utm_source=share&utm_medium=member_desktop)
 
 ## Problem Statement
 - To create a Streamlit application that allows users to enter a YouTube channel ID and retrieve channel details using YouTube Data API.
