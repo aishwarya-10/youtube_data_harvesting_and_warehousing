@@ -23,8 +23,8 @@ The following skills were acquired from the project:
 ## Work Flow
 - **API connect:** Establish a connection to the YouTube API to collect channel, video, and comment details. The Google API client library for Python is used to send requests and retrieve necessary data.
 - **Data Harvest:** Streamlit app creates a simple UI for users to enter the channel ID to extract information.
-- **Data Management:** Initially the harvested data is stored in MongoDB, as it can handle unstructured and semi-structured data easily. '''pymongo''' library is used to connect Python with MongoDB.
-- **Data Migration:** Upon collecting data from multiple channels, the next phase involves the transformation and migration of the documented data into a structured MySQL database. This meticulous process ensures that the collected data is organized and optimized for efficient querying and analysis in the '''pymysql''' environment.
+- **Data Management:** Initially the harvested data is stored in MongoDB, as it can handle unstructured and semi-structured data easily. 'pymongo' library is used to connect Python with MongoDB.
+- **Data Migration:** Upon collecting data from multiple channels, the next phase involves the transformation and migration of the documented data into a structured MySQL database. This meticulous process ensures that the collected data is organized and optimized for efficient querying and analysis in the 'pymysql' environment.
 - **Data Analysis:** Leveraging join functions in SQL queries, valuable insights about channels are retrieved according to user input.
 - **Display Data:** Finally Streamlit displays the channel insights using tables and charts to help users to analyze the data.
 
