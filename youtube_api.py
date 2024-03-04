@@ -80,7 +80,7 @@ if st.button("Collect and Store Data"):
                 return channel_response
             
             except Exception as e:
-                st.error("Error fetching channel data for ", e)
+                st.error("Error: ", e)
                 return None
 
 
@@ -124,7 +124,7 @@ if st.button("Collect and Store Data"):
                 # Generate playlist details
                 playlist_response = youtube.playlistItems().list(
                     playlistId = channel_playlist_id,
-                    part = "snippet, contentDetails",
+                    part = "contentDetails",
                     pageToken = next_page_token
                 ).execute()
 
@@ -142,7 +142,7 @@ if st.button("Collect and Store Data"):
 
         def duration_to_seconds(duration_str: str):
             """
-            Converts a duration string in the format "PT[Xh]M[Xm]S" to seconds.
+            Converts a duration string in the format "PT[X]H[X]M[X]S" to seconds.
 
             Args:
                 duration_str (str): The duration string to convert.
@@ -202,7 +202,7 @@ if st.button("Collect and Store Data"):
 
                 # Get comments 
                 try:
-                    video['comment_threads'] = get_video_comments(video_id, max_comments_per_video=10)
+                    video['comment_threads'] = get_video_comments(video_id, max_comments_per_video=100)
                 except:
                     video['comment_threads'] = None
 
@@ -476,9 +476,9 @@ if check_channel:
         db="youtube_sql_db"
         )
     cur = connection.cursor()
-    cur.execute("SELECT Channel_id, Channel_name FROM Channel")
+    cur.execute("SELECT Channel_id, Channel_name, Video_count FROM Channel")
     result = cur.fetchall()
-    df_viewChannel = pd.DataFrame(result, columns=["Channel ID", "Channel Name"]).reset_index(drop=True)
+    df_viewChannel = pd.DataFrame(result, columns=["Channel ID", "Channel Name", "Video Count"]).reset_index(drop=True)
     df_viewChannel.index += 1
     st.dataframe(df_viewChannel)
     connection.close()
@@ -486,7 +486,7 @@ if check_channel:
 
 # ==================================================       /     DATA EXTRACTION SECTION    /      =================================================== #
 # Query the SQL data
-st.subheader(":blue[Extract Channel Data]")
+st.subheader(":violet[Extract Channel Data]")
 
 # Connect to SQL database
 try:
@@ -610,7 +610,7 @@ def execute_query(selected_option: str):
             fig_vc.update_traces(textfont_size= 16)
             fig_vc.update_xaxes(title_font=dict(size= 20))
             fig_vc.update_yaxes(title_font=dict(size= 20))
-            fig_vc.update_layout(title_font_color= '#1308C2 ', title_font=dict(size= 25))
+            fig_vc.update_layout(title_font_color= '#1308C2', title_font=dict(size= 25))
             st.plotly_chart(fig_vc, use_container_width=True) 
 
     elif selected_option == "8. What are the names of all the channels that have published videos in the year 2022?":
